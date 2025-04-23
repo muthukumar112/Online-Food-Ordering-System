@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search</title>
+<link rel = "stylesheet" href = "{{ url_for('static', filename = 'styles/LaEstilo.css')}}">
+</head>
+
+<h1 class = "custname"><center>Hungry customer's name: <font color = "red">{{cust[0]}}</font></center></h1>
+
+
+<h1> Select what you would like to ingest for your stomach to digest!</h1>
+<br>
+<span><h1 style = "font-family: Verdana;">We serve <font color = "red">HOT</font> and <font color = "green">FRESH</font> <font color = "lightsalmon">Indian</font>, <font color = "tomato">Chinese</font>,<label style = "font-style: italic;"> <font color = "green">Italian</font></label> food for your every mood!</h1></span>
+<br>
+<br>
+<form action="/order" method = "post">
+<span><label style = "font-size: 35px;" for="Food">Choose your desired Food item:  </label>
+&nbsp;
+  <select name="Food" id="food">
+    <optgroup label="Indian Cuisine">
+      <option>Idly & Vada</option>      
+      <option>Nai Roast Dosa</option>
+      <option>Kothu Parotta</option>
+      <option>Gulab Jamun</option>
+    </optgroup>
+    <optgroup label="Chinese Cuisine">
+      <option>Chicken Fried Manchurian</option>
+      <option>Chicken hakka Noodles</option>
+      <option>Chicken and Onion Dumplings</option>
+      <option>Chinese Raspberry Snowflake Cake</option>
+      
+    </optgroup>
+    <optgroup label="Italian cuisine">
+      <option>Pizza Margherita</option>
+      <option>Spaghetti alla Carbonara</option>
+      <option>Lasagna</option>
+      <option>Strawberry Gelato</option>
+    
+  </select>
+  </span>
+ 
+    <br>
+    <br>
+    <br>
+    <br>
+  <span>
+  <label id = "Quantity1" style = "font-size: 35px;" for="Food" >Choose your desired Quantity:  </label>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <select id="Quantity">
+      <option>1</option>      
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>Bulk Order</option>
+      </select>
+  
+  <button onclick = "bulkCheck()" id ="bulkconfirm" type = "button" > I'm Sure </button>
+  </span>          
+  <br>
+  <br>
+  <br>
+
+  <br>
+  <br>
+  <span id = "bulktext">
+	
+  </span>
+  <br>
+  <br>
+
+  <input type = "text" id = "name" name = "hidden" class = "foodname"> </input>
+  <input type = "text" id = "quantities" name = "hidden2" class = "foodname"> </input>
+  <input type = "text" id = "flag" name = "hidden3" class = "foodname"> </input>
+
+  
+  <br>
+  
+  <input name = "Quantitytext"></input>
+  <input type = "submit" value = "Submit" id = "Sub2" onclick = "countbulk()"></input>
+  
+  </form>
+
+
+<script type = "text/javascript" src = "{{ url_for('static', filename = 'Script/ElScripte.js')}}">
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html
